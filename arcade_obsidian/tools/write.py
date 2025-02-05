@@ -32,8 +32,13 @@ async def create_note(
 
     if note_path.exists():
         return "Note already exists."
-    note_path.write_text(content)
-    return "Note created successfully."
+    else:
+        # write the content to the file and create the file if it doesn't exist
+        # TODO return retryable tool error here
+        note_path.parent.mkdir(parents=True, exist_ok=True)
+        note_path.touch(exist_ok=True)
+        note_path.write_text(content)
+        return "Note created successfully."
 
 
 @tool()

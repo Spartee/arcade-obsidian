@@ -1,3 +1,4 @@
+from logging import getLogger
 from pathlib import Path
 from typing import Annotated
 
@@ -5,6 +6,8 @@ from arcade.core.schema import ToolContext
 from arcade.sdk import tool
 
 from arcade_obsidian.constants import OBSIDIAN_VAULT_PATH
+
+logger = getLogger(__name__)
 
 
 @tool()
@@ -15,8 +18,14 @@ async def list_notes(context: ToolContext) -> list[str]:
     This tool should be used when you need to retrieve a list of all markdown files
     present in the Obsidian vault directory.
     """
+    logger.info("Listing all notes in the Obsidian vault")
     vault_path = Path(OBSIDIAN_VAULT_PATH)
-    return [str(file) for file in vault_path.glob("*.md")]
+
+    notes = []
+    for file in vault_path.glob("*.md"):
+        logger.info(f"Found note: {file}")
+        notes.append(str(file))
+    return notes
 
 
 @tool()
@@ -28,6 +37,7 @@ async def read_note(context: ToolContext, filename: Annotated[str, "Filename of 
     in the Obsidian vault.
     """
     note_path = Path(OBSIDIAN_VAULT_PATH) / filename
+    logger.info(f"Reading note: {note_path}")
     if not note_path.exists():
         return "Note does not exist."
     return note_path.read_text()
