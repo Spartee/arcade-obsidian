@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import pytest
-from arcade.core.schema import ToolContext
+from arcade.sdk import ToolContext
 
 from arcade_obsidian import global_search_index
 from arcade_obsidian.index.parse import extract_markdown_title
