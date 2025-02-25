@@ -11,8 +11,7 @@ import logging
 from pathlib import Path
 from typing import Annotated
 
-from arcade.core.schema import ToolContext
-from arcade.sdk import tool
+from arcade.sdk import ToolContext, tool
 
 from arcade_obsidian import global_search_index
 from arcade_obsidian.constants import OBSIDIAN_VAULT_PATH
