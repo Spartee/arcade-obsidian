@@ -53,25 +53,25 @@ async def search_notes_by_title(
 @tool
 async def search_notes_by_content(
     context: ToolContext,
-    content_keyword: Annotated[str, "Keyword to search for in the note content"],
+    content: Annotated[str, "Keyword to search for in the note content"],
 ) -> list[str]:
     """
     Search obsidian notes by content. Use when searching for a specific multiple-word
     or sentence within user notes
     """
     matching_files: list[str] = []
-    logger.info("Starting content search with keyword: %s", content_keyword)
-    if not content_keyword.strip():
-        logger.info("Empty content keyword provided, returning empty list.")
+    logger.info("Starting content search with keyword: %s", content)
+    if not content.strip():
+        logger.info("Empty content argument provided, returning empty list.")
         return matching_files
     else:
         try:
             matching_files = await asyncio.to_thread(
-                global_search_index.search_by_content, content_keyword, MAX_RESULTS
+                global_search_index.search_by_content, content, MAX_RESULTS
             )
             logger.info("Content search completed: found %d matching files.", len(matching_files))
         except Exception:
-            logger.exception("Error during content search for keyword '%s'", content_keyword)
+            logger.exception("Error during content search for keyword '%s'", content)
             raise
 
     return matching_files

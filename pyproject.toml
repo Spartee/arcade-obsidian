@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "arcade_obsidian"
-version = "0.1.0"
+version = "0.2.0"
 readme = "README.md"
 description = "Arcade tools for using LLMs to interact with obsidian"
 authors = ["spartee <sam@partee.io>"]
@@ -9,6 +9,8 @@ authors = ["spartee <sam@partee.io>"]
 python = "^3.10"
 arcade-ai = "1.0.*"
 aiofiles = "^24.1.0"
+Whoosh = "^2.7.4"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.0"
