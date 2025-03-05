@@ -1,28 +1,24 @@
-<div style="display: flex; justify-content: center; align-items: center;">
-<img
-  src="https://docs.arcade.dev/images/logo/arcade-logo.png"
-  style="width: 250px;"
->
-<span style="margin: 0 10px;">+</span>
-<img
-  src="https://images.ctfassets.net/wjg1udsw901v/78Ws2s56LgCLoxkx3Xdcsl/083d00cd84eeec428087bbab65ae3580/obsidian-logo.png"
-  style="width: 300px;"
->
-</div>
-<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 8px;">
-    <img src="https://img.shields.io/github/v/release/spartee/arcade-obsidian" alt="GitHub release" style="margin: 0 2px;">
-    <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python version" style="margin: 0 2px;">
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License" style="margin: 0 2px;">
-    <img src="https://img.shields.io/pypi/v/arcade_obsidian" alt="PyPI version" style="margin: 0 2px;">
-</div>
-<div style="display: flex; justify-content: center; align-items: center;">
-    <a href="https://github.com/spartee/arcade-obsidian" target="_blank">
-        <img src="https://img.shields.io/github/stars/spartee/arcade-obsidian" alt="GitHub stars" style="margin: 0 2px;">
-    </a>
-    <a href="https://github.com/spartee/arcade-obsidian/fork" target="_blank">
-        <img src="https://img.shields.io/github/forks/spartee/arcade-obsidian" alt="GitHub forks" style="margin: 0 2px;">
-    </a>
-</div>
+<!-- A placeholder for a toolkit logo or cover image. Remove or replace with your own. -->
+<h3 align="center">
+  <a name="readme-top"></a>
+  <img
+    src="https://docs.arcade.dev/images/logo/arcade-logo.png"
+    style="width: 250px;"
+  >
+  <p>+</p>
+  <img
+    src="https://images.ctfassets.net/wjg1udsw901v/78Ws2s56LgCLoxkx3Xdcsl/083d00cd84eeec428087bbab65ae3580/obsidian-logo.png"
+    style="width: 300px;"
+  >
+</h3>
+<!-- Add or remove badges as needed. For example, a GitHub star/fork badge or version badges. -->
+<p align="center">
+  <img src="https://img.shields.io/github/stars/spartee/arcade_obsidian" alt="GitHub stars">
+  <img src="https://img.shields.io/github/v/release/spartee/arcade_obsidian" alt="GitHub release">
+  <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python version">
+  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/pypi/v/arcade_obsidian" alt="PyPI version">
+</p>
 
 <br>
 <br>
