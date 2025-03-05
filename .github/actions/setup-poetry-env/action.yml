@@ -19,6 +19,7 @@ runs:
       uses: snok/install-poetry@v1
       with:
         virtualenvs-in-project: true
+        version: 1.8.5
 
     - name: Generate poetry.lock
       run: poetry lock --no-update
